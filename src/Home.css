@@ -1,0 +1,39 @@
+.Home {
+  text-align: center;
+}
+
+.Home-logo {
+  height: 30vmin;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.Home-title {
+  font-size: 60px;
+  width: 75%;
+}
+
+.Home-header {
+  background-color: #e9e1e1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+
+.Home-links {
+  color: #61dafb;
+  flex-direction: row;
+}
+
+.Home-link {
+  margin-left: 2rem !important;
+  font-size: 16px;
+}
+
+.Home-break {
+  padding-bottom: 8%;
+}
