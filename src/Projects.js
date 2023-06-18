@@ -10,7 +10,6 @@ function Projects() {
         {" "}
         <Button
           variant="link"
-          className="App-link"
           href="/"
           style={{ fontSize: "50px", textDecoration: "none" }}
         >

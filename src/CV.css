@@ -31,3 +31,11 @@
   vertical-align: middle;
   justify-content: left;
 }
+
+.CV-download-button {
+  background-image: url("./PDF_file_icon.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 200px;
+}
