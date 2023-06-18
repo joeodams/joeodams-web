@@ -31,23 +31,33 @@ function CV() {
           <CVRow isDivider={true} dividerTitle="Skills"></CVRow>
           <tr>
             {" "}
-            <td></td>
-            <td colSpan={2}>
+            {/* <td></td> */}
+            <td colSpan={3} style={{ paddingLeft: "10%" }}>
               <div
                 className="CV-column"
                 style={{ justifyContent: "center", textAlign: "left" }}
               >
-                <li>.NET: C#/VB, ASP.NET / Core, Web API</li>
-                <li>API design and development</li>
-                <li>React/TS</li>
-                <li>Archiectural design patterns</li>
-                <li>SOLID principles</li>
-                <li>Code review</li>
-                <li>git</li>
-                <li>
-                  Python ML stack: TensorFlow, Keras, scikit-learn, pandas
-                </li>
-                <li>Flask</li>
+                <ul>
+                  <li>.NET: C#/VB, ASP.NET / Core, Web API</li>
+                  <li>API design and development</li>
+                  <li>React/TS</li>
+                  <li>Archiectural design patterns</li>
+                  <li>SOLID principles</li>
+                  <li>Code review</li>
+                  <li>Rapid prototyping</li>
+                  <li>git</li>
+                  <li>
+                    {" "}
+                    Python ML Stack:
+                    <ul>
+                      <li>TensorFlow</li>
+                      <li>Keras</li>
+                      <li>scikit-learn</li>
+                      <li>pandas</li>
+                    </ul>
+                  </li>
+                  <li>Flask</li>
+                </ul>
               </div>
             </td>
             <td></td>
@@ -59,7 +69,7 @@ function CV() {
             tenure="June 2022 - "
             jobDescription="Engineer at Parmenion, developing an investment management
           platform. Worked across a large, mature solution with varying
-          technologies and approaches. Modernisation and infrastructural
+        technologies and approaches. Modernisation and infrastructural
           improvements as well as feature and service development."
             technologies="ASP.NET Core & Framework using MVC, Web API, Web Forms, EF Core, EF6, React, Docker"
           ></CVRow>
@@ -105,6 +115,7 @@ function CV() {
                 Scheme’ (68% final grade)
               </li>,
             ]}
+            isEducationSection={true}
           ></CVRow>
           <CVRow
             jobTitle="Exeter College"
@@ -115,6 +126,7 @@ function CV() {
               <li>Physics</li>,
               <li>History</li>,
             ]}
+            isEducationSection={true}
           ></CVRow>
         </tbody>
       </Table>

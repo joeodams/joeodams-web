@@ -1,7 +1,36 @@
+@media only screen and (max-width: 768px) {
+  .Projects-content {
+    padding-top: 10vh;
+  }
+  .Projects-content-text.election {
+    padding-top: 25vh;
+    max-width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Projects-content {
+    padding-top: 10vh;
+  }
+  .Projects-content-text.election {
+    padding-top: 10vhh;
+  }
+}
+
 .Projects-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-bottom: "10%";
+}
+
+.Projects-context-text {
+  max-width: 80%;
+}
+
+.Projects-container {
+  height: "100vh";
+  display: "flex";
+  flex-flow: "column";
 }

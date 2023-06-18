@@ -9,7 +9,7 @@ function CVRow(props) {
         <p>{props.companyName}</p>
         <p>{props.tenure}</p>
       </td>
-      <td className="CV-table-text">
+      <td className="CV-table-text" colSpan={props.isEducationSection ? 2 : 1}>
         <div
           className="CV-column"
           style={
@@ -19,7 +19,7 @@ function CVRow(props) {
           <p>{props.isDivider ? props.dividerTitle : props.jobDescription} </p>
         </div>
       </td>
-      <td className="CV-table-text">{props.technologies}</td>
+      <td className="CV-table-text">{props.technologies} </td>
     </tr>
   );
 }

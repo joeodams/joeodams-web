@@ -8,9 +8,16 @@
   border-radius: 50%;
 }
 
-.Home-title {
-  font-size: 60px;
-  width: 75%;
+@media only screen and (min-width: 768px) {
+  .Home-title {
+    font-size: 60px;
+    width: 75%;
+  }
+
+  .Home-link {
+    margin-left: 2rem !important;
+    font-size: 25px !important;
+  }
 }
 
 .Home-header {
@@ -27,11 +34,6 @@
 .Home-links {
   color: #61dafb;
   flex-direction: row;
-}
-
-.Home-link {
-  margin-left: 2rem !important;
-  font-size: 25px !important;
 }
 
 .Home-break {

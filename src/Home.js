@@ -21,6 +21,7 @@ function Home() {
             className="Home-link"
             href="https://www.linkedin.com/in/joe-odams-327333a4/"
             target="_blank"
+            style={{ marginLeft: "0px !important" }}
           >
             LinkedIn
           </Button>{" "}
