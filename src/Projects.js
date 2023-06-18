@@ -3,7 +3,7 @@ import electionScreenshot from "./election-app-screenshot.PNG";
 import planningScreenshot1 from "./planning-app-screenshot-1.png";
 import planningScreenshot2 from "./planning-app-screenshot-2.png";
 
-import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 import "./Projects.css";
 
 function Projects() {
@@ -12,25 +12,25 @@ function Projects() {
       <div style={{ height: "95vh", display: "flex", flexFlow: "column" }}>
         <div>
           {" "}
-          <Button
+          <Link
             variant="link"
-            href="/"
+            to="/"
             style={{ fontSize: "50px", textDecoration: "none" }}
             className="position-top"
           >
             ←
-          </Button>
+          </Link>
         </div>
         <Carousel
           style={{
             paddingTop: "2%",
             height: "100%",
-            // position: "fixed",
             bottom: "0",
             width: "100%",
             display: "flex",
           }}
           variant="dark"
+          interval={null}
         >
           <Carousel.Item>
             <div className="Projects-content election">

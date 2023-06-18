@@ -1,6 +1,6 @@
 import selfie from "./selfie.jpg";
 import "./Home.css";
-import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -16,29 +16,29 @@ function Home() {
         <div className="Home-break"></div>
 
         <div className="Home-links">
-          <Button
+          <Link
+            to="https://www.linkedin.com/in/joe-odams-327333a4/"
             variant="link"
             className="Home-link"
-            href="https://www.linkedin.com/in/joe-odams-327333a4/"
             target="_blank"
             style={{ marginLeft: "0px !important" }}
           >
             LinkedIn
-          </Button>{" "}
-          <Button
-            variant="link"
+          </Link>{" "}
+          <Link
+            Link="link"
             className="Home-link"
-            href="https://github.com/joeodams"
+            to="https://github.com/joeodams"
             target="_blank"
           >
             Github
-          </Button>{" "}
-          <Button variant="link" className="Home-link" href="/CV">
+          </Link>{" "}
+          <Link variant="link" className="Home-link" to="/CV">
             CV
-          </Button>{" "}
-          <Button variant="link" className="Home-link" href="/projects">
+          </Link>{" "}
+          <Link variant="link" className="Home-link" to="/projects">
             Projects
-          </Button>{" "}
+          </Link>{" "}
         </div>
       </header>
     </div>

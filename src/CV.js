@@ -1,6 +1,6 @@
 import "./CV.css";
 import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 import CVRow from "./CVrow";
 import pdf from "./PDF_file_icon.png";
 import cvFile from "./CV_file.pdf";
@@ -8,14 +8,14 @@ import cvFile from "./CV_file.pdf";
 function CV() {
   return (
     <div>
-      <Button
+      <Link
         variant="link"
         className="App-link"
-        href="/"
+        to="/"
         style={{ fontSize: "50px", textDecoration: "none" }}
       >
         ←
-      </Button>
+      </Link>
       <a href={cvFile} download="Joe Odams CV.pdf">
         <img
           alt="CV"
