@@ -2,10 +2,7 @@ function CVRow(props) {
   return (
     <tr height={props.isDivider ? "100rem" : "200rem"}>
       <td style={{ alignItems: "right" }}>
-        <p style={{ fontSize: "18px", fontWeight: "bold" }}>
-          {" "}
-          {props.jobTitle}
-        </p>
+        <p style={{ fontSize: "18px", fontWeight: "bold" }}>{props.jobTitle}</p>
         <p>{props.companyName}</p>
         <p>{props.tenure}</p>
       </td>

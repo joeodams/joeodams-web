@@ -27,6 +27,16 @@
     max-width: 65%;
   }
 
+  .CV-skills-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    max-width: 65%;
+  }
+
   .CV-table-text {
     vertical-align: middle;
     justify-content: left;

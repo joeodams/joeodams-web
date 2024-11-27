@@ -1,3 +1,19 @@
+.Projects-title {
+  font-size: 50px;
+  text-align: center;
+}
+
+.Projects-image-container.astron {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.Projects-image-container.astron img {
+  width: calc(25% - 10px);
+  box-sizing: border-box;
+}
+
 @media only screen and (max-width: 768px) {
   .Projects-content {
     padding-top: 10vh;
@@ -5,6 +21,16 @@
   .Projects-content-text.election {
     padding-top: 10vh;
     max-width: 80%;
+  }
+
+  .Projects-image-container.astron img {
+    width: calc(50% - 10px);
+  }
+  .Projects-content.astron {
+    padding-top: 1vh;
+  }
+  .Projects-title {
+    font-size: 25px;
   }
 }
 
@@ -22,7 +48,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: "10%";
 }
 
 .Projects-context-text {
