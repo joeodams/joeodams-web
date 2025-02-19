@@ -1,10 +1,33 @@
 import "./CV.css";
 import Table from "react-bootstrap/Table";
+import cvFile from "./CV_file.pdf";
+import pdf from "./PDF_file_icon.png";
 
 function CV() {
   return (
     <div style={{ width: "100%" }}>
       <div className="CV-container">
+        {/* <a href={cvFile} download="Joe Odams CV.pdf">
+          <img
+            alt="CV"
+            src={pdf}
+            height={"100px"}
+            style={{ float: "right", padding: "10px" }}
+          ></img>
+          Download as PDF
+        </a> */}
+
+        <div className="CV-download">
+          <a
+            href={cvFile}
+            download="Joe Odams CV.pdf"
+            className="CV-download-link"
+          >
+            <img alt="Download CV" src={pdf} className="CV-download-icon" />
+            <span>Download as PDF</span>
+          </a>
+        </div>
+
         <Table
           hover
           color="#e9e1e1"

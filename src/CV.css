@@ -5,6 +5,35 @@
   margin: auto;
 }
 
+/* Container for download link */
+.CV-download {
+  display: flex;
+  justify-content: center; /* Centers content */
+  align-items: center;
+  margin-bottom: 20px; /* Adds space below */
+}
+
+/* Link styling */
+.CV-download-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff; /* Bootstrap-style blue */
+  gap: 10px; /* Adds spacing between text and icon */
+}
+
+.CV-download-link:hover {
+  text-decoration: underline;
+}
+
+/* PDF Icon */
+.CV-download-icon {
+  height: 32px; /* Resizes icon */
+  width: auto;
+}
+
 @media only screen and (min-width: 768px) {
   .CV-column {
     -webkit-column-gap: 20px;
