@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <div
       style={{
-        minHeight: "100%",
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
         backgroundColor: " #e9e1e1",
@@ -24,11 +24,12 @@ const Layout = () => {
           <Link
             variant="link"
             to="/"
-            style={{
-              fontSize: "50px",
-              textDecoration: "none",
-              padding: "4vh",
-            }}
+            className="Back-link"
+            // style={{
+            //   fontSize: "50px",
+            //   textDecoration: "none",
+            //   padding: "4vh",
+            // }}
           >
             ←
           </Link>

@@ -16,6 +16,12 @@
   border-radius: 50%;
 }
 
+.Back-link {
+  font-size: 20px;
+  text-decoration: none;
+  padding: 4vh;
+}
+
 @media only screen and (min-width: 768px) {
   .Home-title {
     font-size: 60px;
@@ -26,12 +32,16 @@
     margin-left: 2rem !important;
     font-size: 25px !important;
   }
+
+  .Back-link {
+    font-size: 50px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .Home-link {
     margin-left: 1rem !important;
-    font-size: 25px !important;
+    /* font-size: 25px !important; */
   }
 }
 

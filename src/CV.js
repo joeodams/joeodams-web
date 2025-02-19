@@ -1,21 +1,10 @@
 import "./CV.css";
 import Table from "react-bootstrap/Table";
-import CVRow from "./CVrow";
-import pdf from "./PDF_file_icon.png";
-import cvFile from "./CV_file.pdf";
 
 function CV() {
   return (
     <div style={{ width: "100%" }}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "80%",
-          alignItems: "center",
-          margin: "auto",
-        }}
-      >
+      <div className="CV-container">
         <Table
           hover
           color="#e9e1e1"
@@ -27,78 +16,48 @@ function CV() {
           }}
         >
           <thead>
-            {/* <tr>
-              <th>Username</th>
-              <th>Username</th>
-              <th>Username</th>
-              <th>Username</th>
-              <th>Username</th>
-              <th>Username</th>
-              <th>Username</th>
-              <th>Username</th>
-            </tr> */}
-          </thead>
-          <thead>
             <tr>
-              <th colSpan={8} style={{ fontSize: "48px" }}>
-                Skills
+              <th colSpan={8} style={{ fontSize: "72px" }}>
+                Key Skills
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td colSpan={4} style={{ alignContent: "center" }}>
+              <td colSpan={8} style={{ alignContent: "center" }}>
                 <div
                   style={{
-                    listStyle: "none",
-                    textAlign: "justify",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                     height: "100%",
+                    fontSize: "48px",
                   }}
                 >
-                  <ul>
-                    <li>.NET: C#/VB, ASP.NET / Core, Web API</li>
-                    <li>API design and development</li>
-                    <li>React/TS</li>
-                    <li>Architectural design patterns</li>
-                    <li>SOLID principles</li>
-                  </ul>
-                </div>
-              </td>
-              <td colSpan={4}>
-                <div
-                  style={{
-                    listStyle: "none",
-                    textAlign: "justify",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    height: "100%",
-                  }}
-                >
-                  <ul>
+                  <ul
+                    style={{
+                      listStyleType: "none",
+                      gap: "15px",
+                      flexWrap: "wrap",
+                      display: "flex",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                      paddingLeft: 0,
+                    }}
+                  >
+                    <li>.NET / C#</li>
+                    <li>Unit testing</li>
+                    <li>Architecture</li>
+                    <li>SQL</li>
                     <li>Code review</li>
                     <li>Rapid prototyping</li>
                     <li>git</li>
-                    <li>
-                      {" "}
-                      Python ML Stack:
-                      <ul>
-                        <li>TensorFlow</li>
-                        <li>Keras</li>
-                        <li>scikit-learn</li>
-                        <li>pandas</li>
-                      </ul>
-                    </li>
-                    <li>Flask</li>
                   </ul>
                 </div>
               </td>
             </tr>
             <tr>
-              <th colSpan={8} style={{ fontSize: "48px" }}>
+              <th colSpan={8} style={{ fontSize: "72px" }}>
                 Experience
               </th>
             </tr>
@@ -123,6 +82,7 @@ function CV() {
                     display: "flex",
                     justifyContent: "center",
                     flexDirection: "column",
+                    padding: "2%",
                   }}
                 >
                   <p>
@@ -171,6 +131,7 @@ function CV() {
                     display: "flex",
                     justifyContent: "center",
                     flexDirection: "column",
+                    padding: "2%",
                   }}
                 >
                   <p>
@@ -220,6 +181,7 @@ function CV() {
                     display: "flex",
                     justifyContent: "center",
                     flexDirection: "column",
+                    padding: "2%",
                   }}
                 >
                   <p>
@@ -268,12 +230,10 @@ function CV() {
                     display: "flex",
                     justifyContent: "center",
                     flexDirection: "column",
+                    padding: "2%",
                   }}
                 >
-                  <p>
-                    I was a data analyst during a period of explosive growth and
-                    acquisition for EQ Data
-                  </p>
+                  <p>Data analyst</p>
                 </div>
               </td>
               <td colSpan={3}>
@@ -291,7 +251,7 @@ function CV() {
               </td>
             </tr>
             <tr>
-              <th colSpan={8} style={{ fontSize: "48px" }}>
+              <th colSpan={8} style={{ fontSize: "72px" }}>
                 Education
               </th>
             </tr>
@@ -303,10 +263,12 @@ function CV() {
                     flexDirection: "column",
                   }}
                 >
-                  <p style={{ fontSize: "18px", fontWeight: "bold" }}>
+                  <p style={{ fontSize: "48px", fontWeight: "bold" }}>
                     Bsc Physics
                   </p>
-                  <p>University of Sussex (2012-2015)</p>
+                  <p style={{ fontSize: "28px" }}>
+                    University of Sussex (2012-2015)
+                  </p>
                 </div>
               </td>
             </tr>

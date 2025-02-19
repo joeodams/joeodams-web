@@ -14,7 +14,7 @@ function Home() {
       </div>
       <div className="Home-break"></div>
 
-      <div className="Home-links">
+      {/* <div className="Home-links">
         <Link
           to="https://www.linkedin.com/in/joe-odams-327333a4/"
           variant="link"
@@ -38,7 +38,7 @@ function Home() {
         <Link variant="link" className="Home-link" to="/projects">
           Projects
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }
