@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders the homepage hero and navigation", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  expect(
+    screen.getByRole("heading", {
+      name: /software engineer building reliable fintech systems/i,
+    }),
+  ).toBeInTheDocument();
+  expect(screen.getByRole("link", { name: /view cv/i })).toBeInTheDocument();
+  expect(screen.getAllByRole("link", { name: /projects/i }).length).toBeGreaterThan(0);
 });

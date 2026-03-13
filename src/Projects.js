@@ -1,113 +1,98 @@
-import Carousel from "react-bootstrap/Carousel";
 import electionScreenshot from "./election-app-screenshot.PNG";
-
-import AstronProjectSlide from "./AstronProjectSlide";
-import PlanningProjectSlide from "./PlanningProjectSlide";
-
+import astronScreenshot1 from "./astron-screenshot-1.png";
+import astronScreenshot2 from "./astron-screenshot-2.png";
+import astronScreenshot3 from "./astron-screenshot-3.jpg";
+import astronScreenshot4 from "./astron-screenshot-4.jpg";
+import planningScreenshot1 from "./planning-app-screenshot-1.png";
+import planningScreenshot2 from "./planning-app-screenshot-2.png";
+import { commercialProjects, sideProjects } from "./siteContent";
 import "./Projects.css";
+
+const projectImages = {
+  astron: [
+    astronScreenshot2,
+    astronScreenshot3,
+    astronScreenshot4,
+    astronScreenshot1,
+  ],
+  planning: [planningScreenshot1, planningScreenshot2],
+  election: [electionScreenshot],
+};
 
 function Projects() {
   return (
-    <div>
-      <div style={{ display: "flex", flexFlow: "column" }}>
-        <Carousel
-          style={{
-            paddingTop: "2%",
-            height: "100%",
-            bottom: "0",
-            width: "100%",
-            display: "flex",
-          }}
-          variant="dark"
-          interval={null}
-          indicators={false}
-        >
-          <Carousel.Item>
-            <AstronProjectSlide />
-
-            <Carousel.Caption
-              style={{
-                color: "black",
-                position: "initial",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
+    <div className="page-container Projects-page">
+      <section className="Projects-section">
+        <div className="Section-heading">
+          <p className="section-kicker">Commercial highlights</p>
+          <h2>Recent work I can describe at a high level</h2>
+        </div>
+        <div className="Projects-grid">
+          {commercialProjects.map((project) => (
+            <article
+              className="section-card Projects-summary-card"
+              key={project.title}
             >
-              <p style={{ maxWidth: "50%" }}>
-                Tech demonstration of how the React Native/Expo stack can be
-                used to rapidly prototype cross-platform mobile apps. The app is
-                a demo for a bike rental service startup. It uses a .NET 7
-                backend and includes a full auth flow and persistence layer.
-              </p>
+              <h3>{project.title}</h3>
+              <p>{project.summary}</p>
+              <ul className="pill-list pill-list-compact">
+                {project.focus.map((item) => (
+                  <li className="pill" key={item}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
 
-              <a href="mailto:joeodams@gmail.com">Request a demo</a>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <PlanningProjectSlide />
-            <Carousel.Caption
-              style={{
-                color: "black",
-                position: "initial",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <p style={{ maxWidth: "75%" }}>
-                This app consists of a YOLACT segmentation model running on the
-                backend trained to scrape context and information from a
-                planning application document. The frontend is a React app which
-                visualises the results, including a 3D reconstruction of the
-                proposal from the architectural drawings.
-              </p>
+      <section className="Projects-section">
+        <div className="Section-heading">
+          <p className="section-kicker">Side projects</p>
+          <h2>Experiments, prototypes, and public-facing builds</h2>
+        </div>
 
-              <a href="mailto:joeodams@gmail.com">
-                Request a demo / chat through the tech!
-              </a>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className="Projects-title">UK Election data visualiser</div>
-            <div className="Projects-content election">
-              <img
-                className="d-block w-50"
-                src={electionScreenshot}
-                alt="First slide"
-                style={{ margin: "auto" }}
-              />
-            </div>
-            <Carousel.Caption
-              style={{
-                color: "black",
-                position: "initial",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <a
-                href="https://polydata.github.io/election-age-breakdown/"
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  fontSize: "50px",
-                }}
+        <div className="Projects-showcase-list">
+          {sideProjects.map((project) => {
+            const images = projectImages[project.id] || [];
+
+            return (
+              <article
+                className="section-card Project-showcase"
+                key={project.id}
               >
-                UK Election App
-              </a>
-              <p className="Projects-content-text election">
-                View the shifting geography and demographics of general
-                elections over the years in this React App.
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-      </div>
+                <div className="Project-copy">
+                  <h3>{project.title}</h3>
+                  <p>{project.summary}</p>
+
+                  <ul className="pill-list pill-list-compact">
+                    {project.stack.map((item) => (
+                      <li className="pill" key={item}>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {images.length > 0 && (
+                  <div
+                    className={`Project-gallery Project-gallery-${project.id}`}
+                  >
+                    {images.map((image, index) => (
+                      <img
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        key={`${project.id}-${index + 1}`}
+                        src={image}
+                      />
+                    ))}
+                  </div>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      </section>
     </div>
   );
 }

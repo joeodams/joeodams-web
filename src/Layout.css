@@ -1,0 +1,128 @@
+.Site-shell {
+  min-height: 100vh;
+  position: relative;
+}
+
+.Site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(18px);
+  background: rgba(247, 242, 236, 0.84);
+  border-bottom: 1px solid rgba(25, 31, 42, 0.08);
+}
+
+.Site-nav {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.Site-brand {
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--ink);
+  min-width: fit-content;
+}
+
+.Site-brand-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.Site-brand-subtitle {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.Site-nav-groups {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.Site-links,
+.Site-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.Site-link,
+.Site-social-link {
+  border-radius: 999px;
+  padding: 0.6rem 0.95rem;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.Site-link {
+  color: var(--ink);
+  border: 1px solid rgba(25, 31, 42, 0.1);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.Site-link:hover,
+.Site-social-link:hover {
+  transform: translateY(-1px);
+}
+
+.Site-link-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff7f0;
+}
+
+.Site-social-link {
+  color: var(--muted);
+}
+
+.Site-main {
+  padding: 1.25rem 0 3rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .Site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Site-nav-groups {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .Site-main {
+    padding-top: 0.75rem;
+  }
+
+  .Site-nav {
+    width: min(1120px, calc(100% - 1.25rem));
+  }
+
+  .Site-nav-groups {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Site-links,
+  .Site-social {
+    width: 100%;
+  }
+}
