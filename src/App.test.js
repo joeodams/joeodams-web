@@ -6,7 +6,7 @@ test("renders the homepage hero and navigation", () => {
 
   expect(
     screen.getByRole("heading", {
-      name: /software engineer building reliable fintech systems/i,
+      name: /software engineer building fintech applications and distributed systems/i,
     }),
   ).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /view cv/i })).toBeInTheDocument();

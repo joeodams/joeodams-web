@@ -1,5 +1,6 @@
 import "./CV.css";
 import { Link } from "react-router-dom";
+import cvFile from "./CV_file.pdf";
 import {
   education,
   experienceItems,
@@ -10,10 +11,6 @@ import {
 } from "./siteContent";
 
 function CV() {
-  const handlePrint = () => {
-    window.print();
-  };
-
   return (
     <div className="page-container CV-page">
       <section className="CV-hero section-card">
@@ -34,13 +31,13 @@ function CV() {
             GitHub
           </a>
           <p className="CV-location">{personalDetails.location}</p>
-          <button
+          <a
             className="button button-primary no-print"
-            onClick={handlePrint}
-            type="button"
+            download="Joe-Odams-CV.pdf"
+            href={cvFile}
           >
-            Print or save as PDF
-          </button>
+            Download CV PDF
+          </a>
         </aside>
       </section>
 
