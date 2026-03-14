@@ -52,6 +52,10 @@
   margin: 0;
 }
 
+.CV-contact-card .button-primary {
+  color: #fff7f0;
+}
+
 .CV-contact-label {
   margin: 0;
   text-transform: uppercase;

@@ -24,7 +24,7 @@ export const summaryBadges = [
   ".NET / C# backend",
   "React and React Native",
   "Go side projects and VPS deployment",
-  "Comfortable with modern agentic AI frameworks (Codex/Claude Code)",
+  "AI tools (Codex/Claude Code)",
 ];
 
 export const focusAreas = [
