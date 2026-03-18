@@ -14,7 +14,7 @@ export const homeHero = {
   intro:
     "I am a Bristol-based software engineer whose commercial work is mostly backend-heavy .NET in regulated fintech. I also enjoy React, rapid prototyping, and getting my teeth into feature development or refactoring legacy codebases.",
   summary:
-    "I'm a software engineer with 4 years building regulated fintech systems at Parmenion and earlier experience across SaaS and data-heavy products. I'm proficient with C#/.NET backend development and React. I have hands-on side projects in React Native, Go, and Python.",
+    "I'm a software engineer with 4 years building regulated fintech systems at Parmenion and earlier experience across SaaS and data-heavy products. I'm strongest in C#/.NET backend development and comfortable in React and Blazor. Side projects include Go APIs, real-time multiplayer apps, embedded dashboards, and computer-vision experiments.",
   note: "Best fit: teams that give engineers room to own meaningful product and platform work.",
 };
 
@@ -22,8 +22,8 @@ export const summaryBadges = [
   "4 years in fintech",
   "10 years across software and data roles",
   ".NET / C# backend",
-  "React and React Native",
-  "Go side projects and VPS deployment",
+  "React, Blazor, and React Native",
+  "Go and VPS deployments",
   "AI tools (Codex/Claude Code)",
 ];
 
@@ -51,6 +51,8 @@ export const skillGroups = [
     skills: [
       "C# / .NET",
       "ASP.NET Core and Framework",
+      "SignalR",
+      "Redis",
       "Web API design",
       "SQL Server",
       "MassTransit",
@@ -74,10 +76,11 @@ export const skillGroups = [
     skills: [
       "Azure",
       "Azure Functions",
+      "DigitalOcean / VPS",
+      "Nginx / Linux",
       "Docker",
       "Distributed services",
       "Git",
-      "VPS deployment",
     ],
   },
 ];
@@ -187,6 +190,32 @@ export const commercialProjects = [
 
 export const sideProjects = [
   {
+    id: "lycanthrope",
+    title: "Lycanthrope",
+    summary:
+      "A real-time online Werewolf game built with Blazor, SignalR, and Redis. Players can join lobbies, chat, add bots, ready up, receive private roles, and play through night and day phases in the browser, all deployed to a small DigitalOcean VPS behind Nginx.",
+    stack: ["Blazor", "SignalR", "Redis", "ASP.NET Core", "DigitalOcean"],
+    link: {
+      label: "Open live app",
+      href: "https://lycanthrope.joeodams.co.uk/",
+      external: true,
+    },
+    featured: true,
+  },
+  {
+    id: "co2",
+    title: "CO2 monitoring station",
+    summary:
+      "End-to-end air-quality monitoring project built around an ESP32 station. The device uploads readings over HTTPS to a Go API on my VPS, which stores them in SQLite and serves a lightweight dashboard for recent CO2, temperature, humidity, and pressure data.",
+    stack: ["Go", "ESP32", "SQLite", "Gin", "Embedded dashboard"],
+    link: {
+      label: "Open live dashboard",
+      href: "https://co2.joeodams.co.uk/",
+      external: true,
+    },
+    featured: true,
+  },
+  {
     id: "astron",
     title: "Bike-share mobile prototype",
     summary:
@@ -221,19 +250,6 @@ export const sideProjects = [
     link: {
       label: "Open live project",
       href: "https://polydata.github.io/election-age-breakdown/",
-      external: true,
-    },
-    featured: true,
-  },
-  {
-    id: "go-api",
-    title: "Go API on a VPS",
-    summary:
-      "Small Go service deployed on a VPS as a place to experiment with lean HTTP APIs, deployment, and operational simplicity outside the .NET ecosystem.",
-    stack: ["Go", "REST API", "Linux / VPS", "Deployment"],
-    link: {
-      label: "More work on GitHub",
-      href: "https://github.com/joeodams",
       external: true,
     },
     featured: false,

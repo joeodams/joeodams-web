@@ -9,6 +9,8 @@ import { commercialProjects, sideProjects } from "./siteContent";
 import "./Projects.css";
 
 const projectImages = {
+  lycanthrope: ["/lycanthrope-title.png"],
+  co2: ["/co2.PNG"],
   astron: [
     astronScreenshot2,
     astronScreenshot3,
@@ -56,12 +58,13 @@ function Projects() {
         <div className="Projects-showcase-list">
           {sideProjects.map((project) => {
             const images = projectImages[project.id] || [];
+            const openInNewTab = /^https?:/i.test(project.link.href);
+            const showcaseClassName = `section-card Project-showcase${
+              images.length === 0 ? " Project-showcase-no-media" : ""
+            }`;
 
             return (
-              <article
-                className="section-card Project-showcase"
-                key={project.id}
-              >
+              <article className={showcaseClassName} key={project.id}>
                 <div className="Project-copy">
                   <h3>{project.title}</h3>
                   <p>{project.summary}</p>
@@ -73,6 +76,17 @@ function Projects() {
                       </li>
                     ))}
                   </ul>
+
+                  <div className="Project-links no-print">
+                    <a
+                      className="button button-secondary"
+                      href={project.link.href}
+                      rel={openInNewTab ? "noreferrer" : undefined}
+                      target={openInNewTab ? "_blank" : undefined}
+                    >
+                      {project.link.label}
+                    </a>
+                  </div>
                 </div>
 
                 {images.length > 0 && (

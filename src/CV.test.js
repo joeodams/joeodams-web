@@ -12,5 +12,5 @@ test("renders a direct download link for the CV PDF", () => {
   const downloadLink = screen.getByRole("link", { name: /download cv pdf/i });
 
   expect(downloadLink).toHaveAttribute("download", "Joe-Odams-CV.pdf");
-  expect(downloadLink).toHaveAttribute("href", expect.stringContaining("CV_file.pdf"));
+  expect(downloadLink).toHaveAttribute("href", expect.stringContaining("CV_File.pdf"));
 });

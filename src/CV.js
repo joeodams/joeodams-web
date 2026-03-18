@@ -1,6 +1,6 @@
 import "./CV.css";
 import { Link } from "react-router-dom";
-import cvFile from "./CV_file.pdf";
+import cvFile from "./CV_File.pdf";
 import {
   education,
   experienceItems,
@@ -110,8 +110,9 @@ function CV() {
           <h2>How I stay current outside commercial systems</h2>
         </div>
         <p className="CV-project-note">
-          Outside work I keep building in React, React Native, Go, computer
-          vision experiments, and small deployed services.
+          Outside work I keep building in React, Blazor, React Native, Go,
+          computer vision experiments, real-time multiplayer apps, and small
+          deployed services.
         </p>
         <div className="CV-project-links no-print">
           <Link className="button button-secondary" to="/projects">

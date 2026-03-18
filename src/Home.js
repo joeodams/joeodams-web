@@ -16,7 +16,6 @@ function Home() {
     <div className="page-container Home-page">
       <section className="Home-hero section-card">
         <div className="Home-copy">
-          <p className="section-kicker">{homeHero.eyebrow}</p>
           <h1 className="Home-title">{homeHero.title}</h1>
           <p className="Home-summary Home-summary-secondary">
             {homeHero.summary}
