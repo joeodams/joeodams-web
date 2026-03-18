@@ -8,11 +8,9 @@ export const personalDetails = {
 };
 
 export const homeHero = {
-  eyebrow: "Open to software engineering opportunities",
-  title:
-    "Software engineer building fintech applications and distributed systems.",
+  title: "Joe Odams",
   intro:
-    "I am a Bristol-based software engineer whose commercial work is mostly backend-heavy .NET in regulated fintech. I also enjoy React, rapid prototyping, and getting my teeth into feature development or refactoring legacy codebases.",
+    "I am a Bristol-based software engineer whose commercial work is mostly backend-heavy .NET in regulated fintech. I love learning new technologies.",
   summary:
     "I'm a software engineer with 4 years building regulated fintech systems at Parmenion and earlier experience across SaaS and data-heavy products. I'm strongest in C#/.NET backend development and comfortable in React and Blazor. Side projects include Go APIs, real-time multiplayer apps, embedded dashboards, and computer-vision experiments.",
   note: "Best fit: teams that give engineers room to own meaningful product and platform work.",
@@ -29,9 +27,9 @@ export const summaryBadges = [
 
 export const focusAreas = [
   {
-    title: "High-impact backend work",
+    title: "Backend development",
     description:
-      "Most of my commercial experience is in C#/.NET services where accuracy matters, especially around financial data, calculations, and distributed application flows.",
+      "Most of my commercial experience is in C#/.NET for critical platform functions, including application layers, API design, and database work.",
   },
   {
     title: "Frontend",
@@ -39,9 +37,9 @@ export const focusAreas = [
       "I am comfortable working in React and Blazor, as well as having experience with legacy frontend applications such as WebForms.",
   },
   {
-    title: "Ownership and fast prototyping",
+    title: "Feature development",
     description:
-      "I do my best work when I can take a problem, break it down, and build out an elegant engineering solution.",
+      "I do my best work when I can own a problem or feature and deliver a solution",
   },
 ];
 
@@ -165,25 +163,24 @@ export const commercialProjects = [
   {
     title: "Near-live valuations service",
     summary:
-      "Key contributor to a service designed to publish fresh valuation figures quickly across the business and into customer-facing experiences. Accuracy in a regulated environment was key!",
+      "Key Made key contributions to a near-live valuations service used across the business in a FCA regulated environment",
     focus: ["Fintech", "Distributed services", "Customer-facing data"],
   },
   {
     title: "Financial projection engine",
     summary:
-      "Built core logic for a retirement projection engine, translating complex modelling rules into maintainable application code.",
+      "Built core logic for a financial projection engine used in automatic regulatory document generation",
     focus: ["Calculation engine", "Business rules", ".NET backend"],
   },
   {
-    title: "Trading workflow enhancements",
-    summary:
-      "Implemented new trading-related functionality inside core platform workflows, working across business-critical front-office and back-office systems.",
+    title: "Trading methodology implementation",
+    summary: "Implemented a key new trading approach in the back office",
     focus: ["Trading systems", "Workflow design", "Legacy and modern .NET"],
   },
   {
     title: "Performance calculation hardening",
     summary:
-      "Reworked time-weighted performance calculation code to reduce bugs and handle valuation edge cases more reliably.",
+      "Reworked time-weighted performance calculation code to reduce bugs and handle subtle edge cases more reliably",
     focus: ["Correctness", "Refactoring", "Financial calculations"],
   },
 ];
@@ -193,7 +190,7 @@ export const sideProjects = [
     id: "lycanthrope",
     title: "Lycanthrope",
     summary:
-      "A real-time online Werewolf game built with Blazor, SignalR, and Redis. Players can join lobbies, chat, add bots, ready up, receive private roles, and play through night and day phases in the browser, all deployed to a small DigitalOcean VPS behind Nginx.",
+      "A real-time online Werewolf game built with Blazor, SignalR, and Redis. Players can join lobbies, chat, and play through night and day phases in the browser, deployed to a small DigitalOcean VPS behind Nginx.",
     stack: ["Blazor", "SignalR", "Redis", "ASP.NET Core", "DigitalOcean"],
     link: {
       label: "Open live app",
@@ -206,7 +203,7 @@ export const sideProjects = [
     id: "co2",
     title: "CO2 monitoring station",
     summary:
-      "End-to-end air-quality monitoring project built around an ESP32 station. The device uploads readings over HTTPS to a Go API on my VPS, which stores them in SQLite and serves a lightweight dashboard for recent CO2, temperature, humidity, and pressure data.",
+      "Air-quality monitoring project built around an ESP32 board. The device uploads readings to a Go API on my VPS, which stores them in SQLite and serves a graphing frontend for recent CO2, temperature, humidity, and pressure readings.",
     stack: ["Go", "ESP32", "SQLite", "Gin", "Embedded dashboard"],
     link: {
       label: "Open live dashboard",

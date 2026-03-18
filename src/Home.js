@@ -18,7 +18,7 @@ function Home() {
         <div className="Home-copy">
           <h1 className="Home-title">{homeHero.title}</h1>
           <p className="Home-summary Home-summary-secondary">
-            {homeHero.summary}
+            {homeHero.intro}
           </p>
 
           <div className="Home-actions no-print">
